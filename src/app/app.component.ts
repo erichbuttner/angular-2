@@ -10,11 +10,17 @@ import { PoMenuItem } from '@po-ui/ng-components';
 export class AppComponent {
 
   readonly menus: Array<PoMenuItem> = [
-    { label: 'Home', action: this.onClick.bind(this) }
-  ];
+    // {
+      // label: 'Tarefas',
+      // icon: 'po-icon-star',
+      // shortLabel: 'Tarefas',
+      // subItems: [
+        { label: 'Todas Tarefa', link: '/' },
+        { label: 'Nova Tarefa', link: 'create-task' },
+        { label: 'Histórico', link: 'history' }
+      // ]
+    // }
 
-  private onClick() {
-    alert('Clicked in menu item')
-  }
+  ];
 
 }

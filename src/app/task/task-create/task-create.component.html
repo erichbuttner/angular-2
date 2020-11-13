@@ -1,0 +1,14 @@
+<po-page-default p-title="Nova tarefa">
+
+  <div class="po-row">
+    <div class="po-xl-6 po-lg-6">
+      <po-input name="input" [(ngModel)]="taskForm.title" p-label="Tarefa"> </po-input>
+      <po-textarea name="textarea" [(ngModel)]="taskForm.description" p-label="Descrição"> </po-textarea>
+      <po-datepicker name="datepicker" [(ngModel)]="taskForm.deadline" p-label="Data Limite"> </po-datepicker>
+      <po-switch name="switch" [(ngModel)]="taskForm.statusSwitch" p-label="Status" p-label-off="Desativado" p-label-on="Ativo">
+      </po-switch>
+      <po-button p-label="Salvar" (p-click)="save()"  p-type="primary"> </po-button>
+      <po-button p-label="Limpar" (p-click)="restore()" p-type="danger"> </po-button>
+    </div>
+  </div>
+</po-page-default>

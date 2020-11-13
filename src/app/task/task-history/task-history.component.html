@@ -1,0 +1,11 @@
+<po-page-default p-title="Histórico de tarefas">
+  <div class="po-row">
+    <div class="po-xl-5 po-lg-5 po-md-5 po-sm-5">
+      <po-input [p-disabled]="items.length === 0" p-icon="po-icon-search" p-disabled="true" [(ngModel)]="search"
+        p-placeholder="Buscar"></po-input>
+    </div>
+  </div>
+  <po-table [p-items]="items | search: search" [p-columns]="columns" p-sort="true" [p-loading]="loading"
+    [p-show-more-disabled]="!buttonShowMoreEnabled || this.search.length > 0 " [p-actions]="actions" (p-show-more)="showMore()">
+  </po-table>
+</po-page-default>
